@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+body{
+    text-align: center;
+    background-color: #faf2da;
+}
+
+svg {
+  top: 80px;
+  right: 44%;
+  width: 300px;
+  position: absolute;
+}
+
+#card {
+  fill: #3d84b8;
+  top: 195px;
+  left: 551px;
+  display: none;
+}
+
+#full-envelope {
+    visibility: hidden;
+  /* z-index: +1; */
+}
+
+#outerflap {
+  top: 4px;
+  z-index: -1;
+  display: none;
+}
+
+#inner-part {
+  top: 80px;
+  display: none;
+}
+
+#front-envelope {
+  display: none;
+}
+
+#back-envelope {
+  /* visibility: hidden; */
+  transform: translateY(3px);
+}
+
+
+
+ @keyframes backRotate{
+    from{
+            transform: rotate3d(0);
+
+    }
+
+    to{
+        transform: rotate3d(0,1,0, 180deg) translateY(3px);
+
+    }
+
+ }
+
+
+ @keyframes fullRotate{
+    from{
+            transform: rotate3d(0,1,0,180deg);
+
+    }
+
+    to{
+        transform: rotate3d(0);
+
+    }
+
+ }
+
+
+@keyframes getoutCard {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes getfrontCard{
+  from {
+    transform: translateY(-200px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes outRotate {
+  from {
+    transform: rotateX(180deg);
+  }
+
+  to {
+    transform: rotateX(180deg) rotate(-20deg) translateX(50px) translateY(10px);
+  }
+}
+
+@keyframes frontRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
